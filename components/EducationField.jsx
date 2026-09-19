@@ -36,7 +36,7 @@ export default function EducationField({ education = [], onChange }) {
       {education.map((edu, index) => (
         <div
           key={edu.id || index}
-          className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:border-slate-300 transition-colors space-y-3 relative group"
+          className="p-3.5 sm:p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:border-slate-300 transition-colors space-y-3 relative group"
         >
           <div className="flex items-center justify-between pb-2 border-b border-slate-200">
             <span className="text-xs font-semibold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">

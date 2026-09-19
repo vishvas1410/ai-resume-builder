@@ -3,7 +3,11 @@
 import React, { useState } from "react";
 import { Download, Printer, Check, AlertCircle } from "lucide-react";
 
-export default function DownloadButton({ targetRef, fileName = "Resume.pdf" }) {
+export default function DownloadButton({
+  targetRef,
+  fileName = "Resume.pdf",
+  isCompact = false,
+}) {
   const [isExporting, setIsExporting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [downloadSuccess, setDownloadSuccess] = useState(false);
@@ -201,28 +205,39 @@ export default function DownloadButton({ targetRef, fileName = "Resume.pdf" }) {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-2">
+    <div className={`flex items-center ${isCompact ? "gap-1.5" : "flex-col sm:flex-row gap-2"}`}>
       <button
         type="button"
         onClick={handleDownloadPDF}
         disabled={isExporting}
-        className="w-full sm:w-auto px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.99]"
+        className={`bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-1.5 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.98] ${
+          isCompact
+            ? "px-3 py-2 text-xs"
+            : "w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm"
+        }`}
         title="Download high-resolution single-page A4 PDF"
       >
         {isExporting ? (
           <>
-            <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            <span>Generating 1-Page PDF...</span>
+            <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin shrink-0" />
+            <span className={isCompact ? "hidden xs:inline" : ""}>Exporting...</span>
           </>
         ) : downloadSuccess ? (
           <>
-            <Check className="w-4 h-4 text-emerald-300" />
+            <Check className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
             <span>Downloaded!</span>
           </>
         ) : (
           <>
-            <Download className="w-4 h-4" />
-            <span>Download PDF (1-Page)</span>
+            <Download className="w-3.5 h-3.5 shrink-0" />
+            {isCompact ? (
+              <span>Download PDF</span>
+            ) : (
+              <>
+                <span className="hidden sm:inline">Download PDF (1-Page)</span>
+                <span className="sm:hidden">PDF</span>
+              </>
+            )}
           </>
         )}
       </button>
@@ -230,12 +245,18 @@ export default function DownloadButton({ targetRef, fileName = "Resume.pdf" }) {
       <button
         type="button"
         onClick={handlePrint}
-        className="w-full sm:w-auto px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-xl transition-colors flex items-center justify-center gap-1.5"
+        className={`bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-xl transition-colors flex items-center justify-center gap-1.5 ${
+          isCompact
+            ? "p-2 sm:px-3 sm:py-2 text-xs"
+            : "w-full sm:w-auto px-3 sm:px-3.5 py-2 sm:py-2.5 text-xs sm:text-sm"
+        }`}
         title="Print or Save as PDF via browser print preview"
+        aria-label="Print or System PDF"
       >
-        <Printer className="w-4 h-4 text-slate-500" />
-        <span className="hidden md:inline">Print / System PDF</span>
-        <span className="md:hidden">Print</span>
+        <Printer className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+        <span className={isCompact ? "hidden md:inline" : "hidden md:inline"}>
+          Print
+        </span>
       </button>
 
       {errorMsg && (

@@ -48,19 +48,19 @@ export default function Hero() {
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-sky-800 text-xs font-semibold shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-sky-600 animate-spin-slow" />
-            <span>Powered by Google Gemini 1.5 Flash</span>
+            <span>Powered by Google Gemini AI</span>
             <span className="w-1.5 h-1.5 rounded-full bg-sky-600" />
             <span className="text-slate-500 font-normal">Free & No Login</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
             Build a professional resume in minutes using{" "}
             <span className="bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">
               AI
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Transform your raw experience into recruiter-approved, ATS-optimized bullet points.
             Craft high-impact summaries, select professional templates, and export print-ready PDFs instantly.
           </p>
@@ -69,14 +69,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <Link
               href="/builder"
-              className="w-full sm:w-auto px-8 py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-bold text-base rounded-xl shadow-lg shadow-sky-600/25 hover:shadow-xl transition-all flex items-center justify-center gap-2 group active:scale-[0.99]"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm sm:text-base rounded-xl shadow-lg shadow-sky-600/25 hover:shadow-xl transition-all flex items-center justify-center gap-2 group active:scale-[0.99]"
             >
               <span>Create My Resume</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="#templates"
-              className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-base rounded-xl border border-slate-200 shadow-xs transition-colors flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm sm:text-base rounded-xl border border-slate-200 shadow-xs transition-colors flex items-center justify-center gap-2"
             >
               Browse Templates
             </a>

@@ -124,15 +124,15 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("personal")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-sky-100 text-sky-700 rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-sky-100 text-sky-700 rounded-lg">
               <User className="w-4 h-4" />
             </span>
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Personal Information</h3>
-              <p className="text-xs text-slate-500">Contact details and portfolio links</p>
+              <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Personal Information</h3>
+              <p className="text-[11px] sm:text-xs text-slate-500">Contact details and portfolio links</p>
             </div>
           </div>
           {openSections.personal ? (
@@ -143,7 +143,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.personal && (
-          <div className="p-5 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="p-3.5 sm:p-5 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div className="sm:col-span-2">
               <label className="block text-xs font-medium text-slate-700 mb-1">
                 Full Name <span className="text-red-500">*</span>
@@ -232,20 +232,20 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("target")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-sky-50/40 hover:bg-sky-50/70 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-sky-50/40 hover:bg-sky-50/70 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-sky-500 text-white rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-sky-500 text-white rounded-lg">
               <Target className="w-4 h-4" />
             </span>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-slate-800 text-sm">Target Role & Job Description</h3>
-                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-sky-100 text-sky-800 rounded-full">
+                <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Target Role & Job Description</h3>
+                <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-sky-100 text-sky-800 rounded-full">
                   AI Context
                 </span>
               </div>
-              <p className="text-xs text-slate-500">Gemini tailors your bullets and summary for this role</p>
+              <p className="text-[11px] sm:text-xs text-slate-500">Gemini tailors your bullets and summary for this role</p>
             </div>
           </div>
           {openSections.target ? (
@@ -256,7 +256,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.target && (
-          <div className="p-5 border-t border-sky-100 space-y-3">
+          <div className="p-3.5 sm:p-5 border-t border-sky-100 space-y-3">
             <div>
               <label className="block text-xs font-medium text-slate-700 mb-1">
                 Target Job Title
@@ -291,15 +291,15 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("summary")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-purple-100 text-purple-700 rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-purple-100 text-purple-700 rounded-lg">
               <Sparkles className="w-4 h-4" />
             </span>
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Professional Summary</h3>
-              <p className="text-xs text-slate-500">Brief executive summary (leave blank for AI generation)</p>
+              <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Professional Summary</h3>
+              <p className="text-[11px] sm:text-xs text-slate-500">Brief executive summary (leave blank for AI generation)</p>
             </div>
           </div>
           {openSections.summary ? (
@@ -310,7 +310,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.summary && (
-          <div className="p-5 border-t border-slate-100">
+          <div className="p-3.5 sm:p-5 border-t border-slate-100">
             <textarea
               rows={4}
               value={data.summary || ""}
@@ -327,15 +327,15 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("experience")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-emerald-100 text-emerald-700 rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-emerald-100 text-emerald-700 rounded-lg">
               <Briefcase className="w-4 h-4" />
             </span>
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Work Experience</h3>
-              <p className="text-xs text-slate-500">Add positions, roles, and achievements</p>
+              <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Work Experience</h3>
+              <p className="text-[11px] sm:text-xs text-slate-500">Add positions, roles, and achievements</p>
             </div>
           </div>
           {openSections.experience ? (
@@ -346,7 +346,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.experience && (
-          <div className="p-5 border-t border-slate-100">
+          <div className="p-3.5 sm:p-5 border-t border-slate-100">
             <ExperienceField
               experience={data.experience || []}
               onChange={(newExp) => onChange({ ...data, experience: newExp })}
@@ -360,15 +360,15 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("skills")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-amber-100 text-amber-700 rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-amber-100 text-amber-700 rounded-lg">
               <Wrench className="w-4 h-4" />
             </span>
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Skills & Competencies</h3>
-              <p className="text-xs text-slate-500">Languages, frameworks, and tools</p>
+              <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Skills & Competencies</h3>
+              <p className="text-[11px] sm:text-xs text-slate-500">Languages, frameworks, and tools</p>
             </div>
           </div>
           {openSections.skills ? (
@@ -379,7 +379,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.skills && (
-          <div className="p-5 border-t border-slate-100">
+          <div className="p-3.5 sm:p-5 border-t border-slate-100">
             <SkillsInput
               skills={data.skills || []}
               onChange={(newSkills) => onChange({ ...data, skills: newSkills })}
@@ -393,15 +393,15 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("education")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-blue-100 text-blue-700 rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-blue-100 text-blue-700 rounded-lg">
               <GraduationCap className="w-4 h-4" />
             </span>
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Education</h3>
-              <p className="text-xs text-slate-500">Degrees, schools, and academic background</p>
+              <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Education</h3>
+              <p className="text-[11px] sm:text-xs text-slate-500">Degrees, schools, and academic background</p>
             </div>
           </div>
           {openSections.education ? (
@@ -412,7 +412,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.education && (
-          <div className="p-5 border-t border-slate-100">
+          <div className="p-3.5 sm:p-5 border-t border-slate-100">
             <EducationField
               education={data.education || []}
               onChange={(newEdu) => onChange({ ...data, education: newEdu })}
@@ -426,15 +426,15 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("projects")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-indigo-100 text-indigo-700 rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-indigo-100 text-indigo-700 rounded-lg">
               <FolderGit2 className="w-4 h-4" />
             </span>
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Projects (Optional)</h3>
-              <p className="text-xs text-slate-500">Open-source or notable portfolio projects</p>
+              <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Projects (Optional)</h3>
+              <p className="text-[11px] sm:text-xs text-slate-500">Open-source or notable portfolio projects</p>
             </div>
           </div>
           {openSections.projects ? (
@@ -445,7 +445,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.projects && (
-          <div className="p-5 border-t border-slate-100 space-y-4">
+          <div className="p-3.5 sm:p-5 border-t border-slate-100 space-y-3 sm:space-y-4">
             {(data.projects || []).map((proj, idx) => (
               <div
                 key={proj.id || idx}
@@ -532,15 +532,15 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         <button
           type="button"
           onClick={() => toggleSection("certifications")}
-          className="w-full px-5 py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
+          className="w-full px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between bg-slate-50/50 hover:bg-slate-50 transition-colors text-left"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="p-2 bg-rose-100 text-rose-700 rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <span className="p-1.5 sm:p-2 bg-rose-100 text-rose-700 rounded-lg">
               <Award className="w-4 h-4" />
             </span>
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Certifications (Optional)</h3>
-              <p className="text-xs text-slate-500">Licenses and recognized credentials</p>
+              <h3 className="font-bold text-slate-800 text-xs sm:text-sm">Certifications (Optional)</h3>
+              <p className="text-[11px] sm:text-xs text-slate-500">Licenses and recognized credentials</p>
             </div>
           </div>
           {openSections.certifications ? (
@@ -551,7 +551,7 @@ export default function ResumeForm({ data, onChange, onGenerateAI, isGenerating 
         </button>
 
         {openSections.certifications && (
-          <div className="p-5 border-t border-slate-100 space-y-4">
+          <div className="p-3.5 sm:p-5 border-t border-slate-100 space-y-3 sm:space-y-4">
             {(data.certifications || []).map((cert, idx) => (
               <div
                 key={cert.id || idx}

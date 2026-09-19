@@ -146,7 +146,7 @@ export default function ExperienceField({ experience = [], onChange }) {
           </div>
 
           <div>
-            <div className="flex items-center justify-between mb-1">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
               <label className="block text-xs font-medium text-slate-700">
                 Bullet Points & Achievements
               </label>

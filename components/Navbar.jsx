@@ -45,11 +45,12 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/builder"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold shadow-sm hover:shadow transition-all hover:gap-2 active:scale-95"
+            className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs sm:text-sm font-semibold shadow-sm hover:shadow transition-all hover:gap-2 active:scale-95"
           >
-            <Sparkles className="w-4 h-4 text-sky-200" />
-            <span>Create My Resume</span>
-            <ArrowRight className="w-4 h-4" />
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-200 shrink-0" />
+            <span className="hidden xs:inline">Create My Resume</span>
+            <span className="xs:hidden">Build</span>
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
           </Link>
         </div>
       </div>
