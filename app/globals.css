@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  color: #1e293b;
+  background-color: #f8fafc;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for form and preview */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Specific Rules for perfect A4 vector PDF output */
+@media print {
+  /* 1. Reset Page and Margins */
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+
+  html, body {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 2. Hide all non-resume website elements */
+  .no-print,
+  header.no-print,
+  nav,
+  footer,
+  aside,
+  button,
+  input,
+  textarea,
+  .sticky-action-bar,
+  #toast-container {
+    display: none !important;
+  }
+
+  /* 3. Unconstrain main grid and containers */
+  main {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .resume-column-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .resume-card-box {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  .print-container {
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #resume-printable-area {
+    width: 100% !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  /* 4. Ensure template inner content has clean print padding */
+  .modern-template,
+  .classic-template,
+  .minimal-template {
+    box-shadow: none !important;
+    border: none !important;
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Page break controls */
+  section,
+  .break-inside-avoid,
+  .resume-header {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
